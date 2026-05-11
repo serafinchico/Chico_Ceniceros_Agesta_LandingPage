@@ -1,0 +1,695 @@
+@font-face {
+  font-family: "Bulgary Rose";
+  src: url("fonts/bulgary-rose.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gloomy Things";
+  src: url("fonts/gloomy-things.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial;
+  background: #000033;
+  color: white;
+  overflow-x: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.header,
+.hero,
+.intro,
+.info,
+.estrella,
+.artistas,
+.deportes,
+.info-extra,
+.horarios,
+.cta,
+.formulario,
+.footer {
+  grid-column: 1 / 4;
+}
+
+/* HEADER */
+
+.header {
+  padding: 25px;
+  text-align: center;
+  background: #000033;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* HERO */
+
+.hero {
+  height: 100vh;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15) 0%,
+    rgba(0,0,0,0.35) 55%,
+    #000033 100%
+  ),
+  url("img/hero.jpg");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding: 60px;
+
+  position: relative;
+}
+
+.hero-personas {
+
+  position: absolute;
+
+  right: 80px;
+  bottom: 0;
+
+  height: 85vh;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.2) 10%,
+    rgba(0,0,0,0.5) 30%,
+    rgba(0,0,0,0.8) 35%,
+    rgba(0,0,0,1) 45%
+  );
+
+  mask-image: linear-gradient(
+    to top,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.2) 20%,
+    rgba(0,0,0,0.5) 40%,
+    rgba(0,0,0,0.8) 65%,
+    rgba(0,0,0,1) 85%
+  );
+}
+
+.hero-contenido {
+  max-width: 620px;
+  margin-left: 40px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  color: white;
+  font-size: 110px;
+  line-height: 0.88;
+  letter-spacing: -4px;
+  margin-bottom: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero h2 span {
+  color: #B7FF00;
+  font-style: italic;
+  display: block;
+}
+
+.hero p,
+.intro p {
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+/* BOTONES */
+
+button {
+  background: #FF6B00;
+  color: white;
+  border: none;
+  padding: 18px 34px;
+  border-radius: 40px;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 35px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* INTRO */
+
+.intro {
+  text-align: center;
+  padding: 90px 30px 50px;
+}
+
+.intro h2 {
+  font-size: 72px;
+  line-height: 1;
+  margin-bottom: 25px;
+  letter-spacing: 4px;
+}
+
+/* INFO */
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.info-box {
+  display: flex;
+  justify-content: center;
+}
+
+.info-box img {
+  width: 250px;
+}
+
+/* TITULOS */
+
+h2 {
+  color: #B7FF00;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 44px;
+  font-weight: 800;
+}
+
+.subtitulo {
+  font-size: 13px;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+/* SECCIONES */
+
+.estrella,
+.artistas,
+.deportes,
+.info-extra,
+.horarios,
+.cta {
+  padding: 90px 40px;
+  text-align: center;
+}
+
+/* ESTRELLAS */
+
+.contenedor-img {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.img-box {
+  position: relative;
+}
+
+.img-box img {
+  border-radius: 18px;
+  display: block;
+}
+
+.estrella .img-box img {
+  height: 800px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ===== ARTISTAS NUEVO ===== */
+
+.artistas {
+  overflow: hidden;
+}
+
+.artistas-grid {
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 70px auto 0;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.artista-box {
+  position: relative;
+}
+
+.artista-box img {
+
+  width: 100%;
+
+  display: block;
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.artista-1 {
+  width: 80%;
+  margin-top: 140px;
+}
+
+.artista-2 {
+  width: 78%;
+  margin-left: 40px;
+
+}
+
+.artista-3 {
+  width: 80%;
+  margin-top: -80px;
+  margin-left: 440px;
+  margin-right: 0px;
+}
+
+.artista-box .titulo-img {
+
+  position: absolute;
+
+  left: 15px;
+
+  bottom: -10px;
+
+  font-size: 44px;
+
+  color: white;
+
+  transform: rotate(-8deg);
+
+  text-shadow: 0 0 12px rgba(0,0,0,0.7);
+}
+
+.artista-2 .titulo-img {
+  right: 10px;
+  left: auto;
+  text-align: right;
+}
+
+.artista-3 .titulo-img {
+  left: 20px;
+  bottom: -5px;
+}
+
+/* DEPORTES */
+
+.deportes-img {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 20px 120px;
+}
+
+.deporte-box {
+  flex: 0 0 auto;
+}
+
+.deporte-box img {
+  width: auto;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+}
+
+/* TITULOS IMAGEN */
+
+.titulo-img {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 22px;
+  font-weight: 800;
+  text-shadow: 0 0 10px black;
+}
+
+/* FUENTES */
+
+.artista-font {
+  font-family: "Bulgary Rose", serif;
+}
+
+.estrella-font {
+  font-family: "Gloomy Things", cursive;
+  font-size: 26px;
+}
+
+/* TEXTO FINAL */
+
+.bloque-texto {
+  max-width: 950px;
+  margin: auto;
+}
+
+.bloque-texto h2 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.bloque-texto p {
+  line-height: 2.2;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+/* HORARIOS */
+
+.lista-horarios {
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+}
+
+.lista-horarios p {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.lista-horarios span {
+  font-weight: 800;
+  color: #B7FF00;
+}
+
+/* FORM */
+
+.oculto {
+  display: none;
+}
+
+.mostrar {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,30,0.96);
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background: #000066;
+  padding: 50px;
+  border-radius: 24px;
+  width: 400px;
+  text-align: center;
+}
+
+.form-box input {
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Montserrat';
+}
+
+/* FOOTER */
+
+.footer {
+
+  background: #000001;
+
+  padding: 35px 40px;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto auto;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+/* INFO IZQUIERDA */
+
+.footer-info {
+
+  justify-self: start;
+}
+
+.footer-info p {
+
+  margin: 8px 0;
+
+  font-size: 13px;
+
+  opacity: 0.8;
+
+  letter-spacing: 1px;
+
+  color: white;
+
+  text-align: left;
+}
+
+/* LOGOS CENTRO */
+
+.footer-marcas {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 40px;
+
+  justify-self: center;
+}
+
+.footer-marcas img {
+
+  height: 34px;
+
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* REDES DERECHA */
+
+.footer-redes {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  justify-self: end;
+}
+
+.footer-redes img {
+
+  height: 24px;
+
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* ===== PUNTITOS VERDES DE FONDO ===== */
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  background-image:
+    radial-gradient(#B7FF00 1.5px, transparent 1.5px);
+
+  background-size: 38px 38px;
+
+  opacity: 0.45;
+}
+.hero-logos-top {
+
+  position: absolute;
+
+  right: 180px;
+  top: 70px;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  z-index: 5;
+}
+
+.hero-logos-top img {
+
+  height: 90px;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.45));
+}
+
+.boton-img {
+
+  position: relative;
+
+  display: inline-block;
+
+  cursor: pointer;
+
+  margin-top: 35px;
+
+  transition: 0.3s;
+}
+
+.boton-img:hover {
+  transform: scale(1.05);
+}
+
+.boton-img img {
+
+  width: 340px;
+
+  display: block;
+}
+
+.boton-img span {
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: white;
+
+  font-weight: 800;
+
+  font-size: 15px;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+
+  width: 80%;
+
+  pointer-events: none;
+}
+
+.horarios-carrusel {
+  padding: 90px 40px;
+  text-align: center;
+
+  grid-column: 1 / -1; 
+}
+
+.horarios-carrusel h2 {
+  color: #B7FF00;
+  font-size: 44px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* CONTENEDOR CENTRADO REAL */
+.carousel {
+  display: flex;
+  gap: 15px;
+
+  max-width: 1100px;
+  margin: 0 auto;        
+
+  overflow-x: auto;
+  padding: 20px 10px;
+
+  scroll-snap-type: x mandatory;
+}
+.carousel {
+  scrollbar-width: thin;             
+  scrollbar-color: #B7FF00 rgba(255,255,255,0.1);
+}
+
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #B7FF00;
+  border-radius: 10px;
+}
+
+/* CARDS */
+.card {
+  min-width: 180px;
+  max-width: 180px;
+  height: 280px;
+
+  flex-shrink: 0;
+  scroll-snap-align: start;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body.form-open {
+  overflow: hidden;
+}
+.mostrar {
+  z-index: 9999;
+}
+
+.formulario {
+  z-index: 9999;
+}

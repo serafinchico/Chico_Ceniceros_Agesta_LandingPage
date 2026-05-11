@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Olé Sport Summer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<div class="grid">
+
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <img src="img/personas.png" class="hero-personas" alt="personas">
+
+    <div class="hero-logos-top">
+      <img src="img/ole.png" alt="Olé">
+      <img src="img/pinamar.png" alt="Pinamar">
+    </div>
+
+    <div class="hero-contenido">
+
+      <h2>
+        ¡VIVÍ EL <br>
+        <span>VERANO</span>
+        MÁS <br>
+        DEPORTIVO!
+      </h2>
+
+      <p>
+        Unite a los Olé Sport Summer y experimenta la adrenalina de los mejores eventos frente al mar.
+      </p>
+
+      <div class="boton-img" onclick="abrirFormulario()">
+        <img src="img/boton.png" alt="Botón VIP">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+
+    <h2 class="intro-title">
+      UN VERANO, TRES FORMAS DE VIVIRLO
+    </h2>
+
+    <p>Elegí tu experiencia en la arena.</p>
+
+  </section>
+
+  <!-- INFO -->
+  <section class="info">
+
+    <div class="info-box"><img src="img/info1.png"></div>
+    <div class="info-box"><img src="img/info2.png"></div>
+    <div class="info-box"><img src="img/info3.png"></div>
+    <div class="info-box"><img src="img/info4.png"></div>
+
+  </section>
+
+  <!-- ESTRELLAS -->
+  <section class="estrella">
+
+    <h2 class="section-title">ENTRENÁ CON ESTRELLAS</h2>
+
+    <p class="subtitulo">Clínicas con jugadores profesionales</p>
+
+    <div class="contenedor-img">
+      <div class="img-box unica-estrella">
+        <img src="img/estrella1.jpg">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ARTISTAS -->
+  <section class="artistas">
+
+    <h2 class="section-title">DISFRUTÁ DEL SUNSET</h2>
+    <p class="subtitulo">Música en vivo</p>
+
+    <div class="artistas-grid">
+
+      <div class="artista-box artista-1">
+        <img src="img/artista1.png">
+      </div>
+
+      <div class="artista-box artista-2">
+        <img src="img/artista3.png">
+      </div>
+
+      <div class="artista-box artista-3">
+        <img src="img/artista2.png">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DEPORTES -->
+  <section class="deportes">
+
+    <h2 class="section-title">VIVÍ LA ARENA EN ACCIÓN</h2>
+    <p class="subtitulo">Deportes frente al mar</p>
+
+    <div class="deportes-img">
+
+      <div class="img-box deporte-box"><img src="img/deporte1.jpg"></div>
+      <div class="img-box deporte-box"><img src="img/deporte2.jpg"></div>
+      <div class="img-box deporte-box"><img src="img/deporte3.jpg"></div>
+      <div class="img-box deporte-box"><img src="img/deporte4.jpg"></div>
+
+    </div>
+
+  </section>
+
+  <!-- HORARIOS -->
+  <section class="horarios-carrusel">
+
+    <h2>Horarios</h2>
+
+    <div class="carousel">
+
+      <div class="card"><img src="img/horario1.jpg"></div>
+      <div class="card"><img src="img/horario2.jpg"></div>
+      <div class="card"><img src="img/horario3.jpg"></div>
+      <div class="card"><img src="img/horario4.jpg"></div>
+      <div class="card"><img src="img/horario5.jpg"></div>
+      <div class="card"><img src="img/horario6.jpg"></div>
+      <div class="card"><img src="img/horario7.jpg"></div>
+      <div class="card"><img src="img/horario8.jpg"></div>
+      <div class="card"><img src="img/horario9.jpg"></div>
+
+    </div>
+
+  </section>
+
+  <!-- INFO EXTRA -->
+  <section class="info-extra">
+
+    <div class="bloque-texto">
+
+      <h2 class="section-title">TODO EL VERANO EN UN SOLO LUGAR.</h2>
+
+      <p>
+        Clínica con leyendas del deporte, torneos de la costa y festival con el mejor line-up mas potente del verano. Pinamar te espera para vivir la experiencia depotiva y musical definitiva
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2 class="cta-title">¿ESTÁS LISTO PARA SER PROTAGONISTA?</h2>
+
+    <div class="boton-img" onclick="abrirFormulario()">
+      <img src="img/boton.png" alt="Botón VIP">
+    </div>
+
+  </section>
+
+  <!-- FORM -->
+  <section class="formulario oculto" id="registro">
+
+    <div class="form-box">
+
+      <button class="cerrar" onclick="cerrarFormulario()">X</button>
+
+      <h2>REGISTRATE</h2>
+
+      <form>
+
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Mail" required>
+        <input type="number" placeholder="Edad" required>
+
+        <button type="submit">QUIERO PARTICIPAR</button>
+
+      </form>
+
+      <p id="mensaje-ok"></p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-info">
+      <p>Olé Sport Summer</p>
+      <p>© 2026 Olé</p>
+    </div>
+
+    <div class="footer-marcas">
+      <img src="img/lemon.png">
+      <img src="img/redbull.png">
+      <img src="img/cocacola.png">
+    </div>
+
+    <div class="footer-redes">
+      <img src="img/instagram.png">
+      <img src="img/tiktok.png">
+      <img src="img/youtube.png">
+    </div>
+
+  </footer>
+
+</div>
+
+<script>
+function abrirFormulario() {
+  document.getElementById("registro").classList.add("mostrar");
+}
+
+function cerrarFormulario() {
+  document.getElementById("registro").classList.remove("mostrar");
+}
+
+document.querySelector("form").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("mensaje-ok").innerText = "✔ Registro enviado correctamente";
+});
+</script>
+
+</body>
+</html>
